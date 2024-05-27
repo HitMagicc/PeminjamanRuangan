@@ -1,5 +1,5 @@
 body {
-    font-family: Inter;
+    /* font-family: Inter; */
 }
 
 .login-blade{
@@ -81,6 +81,61 @@ button[type="submit"]:hover {
 
 /* Example styling for carousel images to ensure they fit well */
 .carousel-item img {
-    max-height: 300px; /* Adjust as needed */
+    max-height: 300px; 
     object-fit: cover;
+}
+
+.rectangle-parent{
+    display: flex;
+    flex-direction: column;
+    width: 264px; /* Adjust width as needed */
+    height: 100vh;
+    background-color: #355A92; /* Background color for the sidebar */
+    padding: 10px; /* Padding for some spacing */
+    color: #ffffff;
+    border-top-right-radius: 30px;
+    /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);  Optional: Shadow for depth */
+}
+
+.group-item
+{
+    background-color: #ffffff;
+    border-radius: 14px;
+    color: #355A92; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.dashboard, .request, .riwayat, .user-parent {
+    display: flex;
+    align-items: center;
+    padding: 12px 0; /* Spacing between items */
+    flex-direction: row;
+    margin: 0 10px; 
+    font-size: 16px; /* Font size for the text */
+    padding-left: 20px; /* Add left padding to move content to the right */
+    height: 61px;
+    
+}
+
+.teks-judul{
+    margin: 20px;
+}
+
+.riwayat{
+    display: flex ;
+}
+
+.vector-icon {
+    display: flex;
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    flex-shrink: 0; /* Prevent icons from shrinking */
+    margin-right: 10px; /* Initial space between icon and text */
+}
+
+.user-parent {
+    margin-top: auto; /* Pushes the "User" section to the bottom */
+    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    display: flex;
+    align-items: center;
 }
