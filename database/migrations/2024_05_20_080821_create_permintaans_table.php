@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('id_ruangan')->constrained('ruangan');
             $table->foreignId('id_user')->constrained('user');
-            $table->enum('level',[0,1]);
+            $table->foreignId('id_berkas')->constrained('berkas');
+            $table->enum('approval',[0,1]);
             $table->timestamps();
         });
     }

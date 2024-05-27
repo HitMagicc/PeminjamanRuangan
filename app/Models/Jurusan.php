@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Jurusan extends Model
 {
     use HasFactory;
+
+    protected $table = 'jurusan';
+
+    protected $fillable = [
+        'nama_jurusan',
+        'nama_kaprodi',
+    ];
+
+    public function gedung()
+    {
+        return $this->belongsTo(Gedung::class);
+    }
 }

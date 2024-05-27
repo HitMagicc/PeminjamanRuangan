@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('ruangan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_gedung')->constrained('gedung'); // Define foreign key constraint
+            $table->foreignId('id_gedung')->constrained('gedung'); 
             $table->string('nama_ruangan');
             $table->enum('jenis', [0, 1, 2]);
             $table->integer('kapasitas');

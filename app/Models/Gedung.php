@@ -13,4 +13,13 @@ class Gedung extends Model
         'nama_gedung',
         'alamat',
     ];
+    public function ruangan()
+    {
+        return $this->hasMany(Ruangan::class);
+    }
+    public function jurusan()
+    {
+        return $this->hasMany(Jurusan::class);
+    }
+
 }
