@@ -4,13 +4,12 @@ use App\Http\Controllers\GedungController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
-
 /*Route::get('/', [LoginController::class,'login'])->name('index.login');
 
 Route::post('/', [LoginController::class,'authenticate'])->name('auth.login');
 Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');*/
 Route::get('/', function () {
-    return view('layout.admin.index');
+    return view('components.templates.user.dashboard.index');
 });
 
 Route::get('/yes', [GedungController::class, 'index'])->name('user.index');
