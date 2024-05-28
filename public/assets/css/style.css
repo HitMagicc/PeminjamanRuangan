@@ -288,6 +288,16 @@ button[type="submit"]:hover {
     margin-top: 20px;
     margin-left: 60px;
 }
+.riwayat-bagian-tempat{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.riwayat-bagian-tempat .nama {
+    margin-right: 20px; 
+}
 
 .no-ruang{
     font-size: 25px;
