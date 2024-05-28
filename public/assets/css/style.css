@@ -1,6 +1,5 @@
 body {
     /* font-family: Inter; */
-    padding-left: 264px;
 }
 
 .login-blade{
@@ -87,9 +86,8 @@ button[type="submit"]:hover {
 }
 
 .rectangle-parent{
-    left: 0;
-    height: 100%;
-    position: fixed;
+    
+    height: 100vh;
     display: flex;
     flex-direction: column;
     width: 264px; /* Adjust width as needed */
@@ -315,4 +313,88 @@ button[type="submit"]:hover {
     max-height: 130px;
     width: 30px;
     border-radius: 0px 30px 30px 0px;
+}
+
+.req-ruangan{
+    margin-top: 20px;
+    background-color: #d6d6d6;
+    border-radius: 40px 40px 0 0;
+}
+
+.req-ruangan-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.teks-ruangan-form{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.form-kelompok{
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 0;
+    flex-wrap: wrap;
+}
+.form-kelompok-isi{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 10px;
+    padding-left: 20px;
+}
+@media (max-width: 800px) {
+    .form-kelompok {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .form-kelompok-isi {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.form-kelompok-isi label {
+    margin-bottom: 5px;   
+}
+.form-kelompok-isi input {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.form-kelompok-isi select {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.buttonsubmit-kelompok{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 70px 3dd 0px;
+    align-items: center;
+}
+
+.checkbox-text{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+.checkbox-text input{
+    margin-right: 15px;
+}
+.checkbox-text label{
+    display: flex;
+    margin-right: 30px;
+}
+.button{
+    display: flex;
+    max-height: 100px;
 }
