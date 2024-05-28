@@ -17,7 +17,9 @@ Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
 
 //user
 Route::get('/user/dashboard', [DashboardController::class,'index'])->name('dashboard.index');
+
 Route::get('/user/request', [RequestController::class,'index'])->name('request.index');
+
 Route::get('/user/riwayat', [RiwayatController::class,'index'])->name('riwayat.index');
 
 Route::get('/yes', [GedungController::class, 'index'])->name('user.index');
