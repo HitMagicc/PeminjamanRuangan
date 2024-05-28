@@ -103,10 +103,7 @@ button[type="submit"]:hover {
 
 .group-item
 {
-    background-color: #ffffff;
-    border-radius: 14px;
-    color: #355A92; 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
 }
 
 .dashboard, .request, .riwayat, .user-parent {
@@ -136,7 +133,9 @@ button[type="submit"]:hover {
     flex-shrink: 0; /* Prevent icons from shrinking */
     margin-right: 10px; /* Initial space between icon and text */
 }
-
+.flex-grow{
+    flex-grow: 1;
+}
 .user-parent {
     margin-top: auto; /* Pushes the "User" section to the bottom */
     margin-bottom: 10px; /* Optional: Bottom margin for spacing */
