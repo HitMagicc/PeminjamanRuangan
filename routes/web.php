@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/', [LoginController::class,'authenticate'])->name('auth.login');
 // Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
 Route::get('/', function () {
-    return view('components.templates.user.request.create');
+    return view('components.templates.user.request.show');
 });
 
 //user
