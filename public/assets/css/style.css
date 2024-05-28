@@ -149,8 +149,35 @@ button[type="submit"]:hover {
 }
 
 .content{
-    padding: 40px;
+    margin:  30px;
 }
+
+.flex-grow{
+    flex-grow: 1;
+}
+.user-parent {
+    margin-top: auto; /* Pushes the "User" section to the bottom */
+    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    display: flex;
+    align-items: center;
+}
+
+.rectangle-parent a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.rectangle-parent a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.group-item.active {
+    background-color: #ffffff;
+    border-radius: 14px;
+    color: #355A92; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
 .full-square-with-lines{
     display:flex;
     flex-direction: row;
@@ -163,7 +190,7 @@ button[type="submit"]:hover {
 .line-center{
     align-self: center;
     display: flex;
-    height: 682px;
+    height: 650px;
     background-color: #000000;
     width: 1px;
     margin-right: 60px;
@@ -221,4 +248,71 @@ button[type="submit"]:hover {
     width: 420px;
     height: 50px;
     margin-top: auto;
+}
+
+.teks-req{
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teks-req h5 {
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+.teks-req button {
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    border: none;
+    height: 38px;
+}
+
+.card-request-parent{
+    margin-top: 20px;
+}
+.card-request{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 130px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.no-ruang{
+    font-size: 25px;
+}
+
+.gedung{
+    font-size: 20px;
+}
+
+.bagian-adm {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    margin-left: auto; /* Push .bagian-adm to the end */
+}
+
+.nama.tanggal {
+    margin-right: 20px; /* Add some space between the date and .acceptance */
+}
+
+.acceptance {
+    height: 100%;
+    max-height: 130px;
+    width: 30px;
+    border-radius: 0px 30px 30px 0px;
 }
