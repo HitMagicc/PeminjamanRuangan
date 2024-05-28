@@ -50,7 +50,7 @@
         <div class="square-b">
         <div class="elemenkotak">
                 <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
+                    Nomor Ruangan <br>Acceptance
                 </div>
                 <div class="elemenkotak2">
                     DD-MM-YY<br>-<br>DD-MM-YY
