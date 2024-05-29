@@ -1,0 +1,466 @@
+body {
+    /* font-family: Inter; */
+}
+
+.login-blade{
+    background-color: #355A92;
+}
+
+.background {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-login {
+width: 100%;
+position: relative;
+max-width: 100%;
+overflow: hidden;
+height: 136px;
+}
+
+.login-container{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.login-form{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 100%;
+}
+
+button[type="submit"] {
+    padding: 0.75rem;
+    background-color: #355A92;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    animation-duration: 10ms;
+}
+
+button[type="submit"]:hover {
+    background-color: #7794c9;
+}
+
+.vl {
+    border-left: 2px solid #ccc;
+    height: 300px; /* Adjust as needed */
+}
+
+/* Style the carousel container */
+.carousel {
+    flex: 1;
+}
+
+/* Example styling for carousel images to ensure they fit well */
+.carousel-item img {
+    max-height: 300px; 
+    object-fit: cover;
+}
+
+.rectangle-parent{
+    
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 264px; /* Adjust width as needed */
+    background-color: #355A92; /* Background color for the sidebar */
+    padding: 10px; /* Padding for some spacing */
+    color: #ffffff;
+    border-top-right-radius: 30px;
+    /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);  Optional: Shadow for depth */
+    flex-wrap: wrap;
+}
+
+.group-item
+{
+    
+}
+
+.dashboard, .request, .riwayat, .user-parent {
+    display: flex;
+    align-items: center;
+    padding: 12px 0; /* Spacing between items */
+    flex-direction: row;
+    margin: 0 10px; 
+    font-size: 16px; /* Font size for the text */
+    padding-left: 20px; /* Add left padding to move content to the right */
+    height: 61px;
+    
+}
+
+.teks-judul{
+    margin: 20px;
+}
+
+.riwayat{
+    display: flex ;
+}
+
+.vector-icon {
+    display: flex;
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    flex-shrink: 0; /* Prevent icons from shrinking */
+    margin-right: 10px; /* Initial space between icon and text */
+}
+.flex-grow{
+    flex-grow: 1;
+}
+.user-parent {
+    margin-top: auto; /* Pushes the "User" section to the bottom */
+    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    display: flex;
+    align-items: center;
+}
+
+.merging-index{
+    display: flex;
+    flex-direction: row;
+}
+
+.content{
+    margin:  30px;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+.user-parent {
+    margin-top: auto; /* Pushes the "User" section to the bottom */
+    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    display: flex;
+    align-items: center;
+}
+
+.rectangle-parent a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.rectangle-parent a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.group-item.active {
+    background-color: #ffffff;
+    border-radius: 14px;
+    color: #355A92; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+.full-square-with-lines{
+    display:flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.line-center{
+    align-self: center;
+    display: flex;
+    height: 650px;
+    background-color: #000000;
+    width: 1px;
+    margin-right: 60px;
+}
+
+
+.square-a{
+    width: 500px;
+    padding: 20px;
+    height: 644px;
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    display: flex;
+    margin-right: 60px;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+.square-b{
+    width: 500px;
+    padding: 20px;
+    height: 644px;
+    background-color: #D9D9D9;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.elemenkotak{
+    width: 420px;
+    height: auto;
+    flex-shrink: 0;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000}
+
+.elemenkotak2{
+    align-items: center;
+    width: 150px;
+    height: 108px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.seemore{
+    bottom: 20px;
+    text-align: center;
+    width: 420px;
+    height: 50px;
+    margin-top: auto;
+}
+
+.teks-req{
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.teks-req h5 {
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+.teks-req button {
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: relative;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    border: none;
+    height: 38px;
+}
+
+.card-request-parent{
+    margin-top: 20px;
+}
+.card-request{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 130px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+.bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.riwayat-bagian-tempat{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.riwayat-bagian-tempat .nama {
+    margin-right: 20px; 
+}
+
+.no-ruang{
+    font-size: 25px;
+}
+
+.gedung{
+    font-size: 20px;
+}
+
+.bagian-adm {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    margin-left: auto; /* Push .bagian-adm to the end */
+}
+
+.nama.tanggal {
+    margin-right: 20px; /* Add some space between the date and .acceptance */
+}
+
+.acceptance {
+    height: 100%;
+    max-height: 130px;
+    width: 30px;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.req-ruangan{
+    margin-top: 20px;
+    background-color: #d6d6d6;
+    border-radius: 40px 40px 0 0;
+}
+
+.req-ruangan-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.teks-ruangan-form{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.form-kelompok{
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 0;
+    flex-wrap: wrap;
+}
+.form-kelompok-isi{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 10px;
+    padding-left: 20px;
+}
+@media (max-width: 800px) {
+    .form-kelompok {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .form-kelompok-isi {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.form-kelompok-isi label {
+    margin-bottom: 5px;   
+}
+.form-kelompok-isi input {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.form-kelompok-isi select {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.buttonsubmit-kelompok{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 70px 3dd 0px;
+    align-items: center;
+}
+
+.checkbox-text{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+.checkbox-text input{
+    margin-right: 15px;
+}
+.checkbox-text label{
+    display: flex;
+    margin-right: 30px;
+}
+.button{
+    display: flex;
+    max-height: 100px;
+}
+
+.kotak-atas{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75vw;
+}
+
+.kotak-satu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+}
+
+.show-text{
+    margin-left: 20px;
+}
+
+.garis{
+    align-self: center;
+    display: flex;
+    height: 120px;
+    background-color: #000000;
+    width: 1px;
+    margin:0px 20px;
+
+}
+
+.kotak-dua{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+}
+
+.tulisan-detail{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.teks-detail{
+    margin-top: 10px;
+}

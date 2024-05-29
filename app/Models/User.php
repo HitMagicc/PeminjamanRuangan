@@ -16,12 +16,17 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $table = 'user';
     protected $fillable = [
         'name',
         'email',
         'password',
+        'enum'
     ];
-
+    public function permintaan()
+    {
+        return $this->hasMany(Permintaan::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *
