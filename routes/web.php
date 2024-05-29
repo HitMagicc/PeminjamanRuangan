@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\GedungController as AdminGedungController;
 use App\Http\Controllers\GedungController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\User\DashboardController;
@@ -21,6 +23,13 @@ Route::get('/user/dashboard', [DashboardController::class,'index'])->name('dashb
 Route::get('/user/request', [RequestController::class,'index'])->name('request.index');
 
 Route::get('/user/riwayat', [RiwayatController::class,'index'])->name('riwayat.index');
+
+//admin
+Route::get('/admin/dashboard', [AdminDashboardController::class,'index'])->name('admin.dashboard.index');
+Route::get('/admin/dashboard/show', [AdminDashboardController::class,'show'])->name('admin.dashboard.index');
+
+Route::get('/admin/gedung', [AdminGedungController::class,'index'])->name('admin.dashboard.index');
+Route::get('/admin/gedung/create', [AdminGedungController::class,'create'])->name('admin.dashboard.create');
 
 Route::get('/yes', [GedungController::class, 'index'])->name('user.index');
 Route::get('/create-gedung',[GedungController::class,'create'])->name('user.create-gedung');
