@@ -272,6 +272,12 @@ button[type="submit"]:hover {
 .card-request-parent{
     margin-top: 20px;
 }
+
+.card-request-parent a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 .card-request{
     display: flex;
     justify-content: space-between;
