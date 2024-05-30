@@ -10,9 +10,9 @@
     <title>Peminjaman 2024</title>
 </head>
 <body class="bg-gray-100">
-    <div class="min-h-screen flex">
+    <div class="merging-index">
         @include('components.organism.admin.sidebar')
-        <div class="flex-1 p-6">
+        <div class="content">
             @yield('mainContent')
         </div>
     </div>

@@ -11,6 +11,6 @@ class DashboardController extends Controller
         return view('components.templates.admin.dashboard.index', []);
     }
     public function show(){
-        return view('components.templates.admin.dashboard.index', []);
+        return view('components.templates.admin.dashboard.show', []);
     }
 }
