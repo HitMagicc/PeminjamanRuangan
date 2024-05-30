@@ -18,10 +18,15 @@
     margin-right: 10px;
     font-size: 16px; /* Font size for the text */
     padding-left: 20px; /* Add left padding to move content to the right */
-    height: 61px;
-    
+    height: 61px; 
 }
-
+.merging-index{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    margin:  30px;
+}
 .group-item{
     background-color: #ffffff;
     border-radius: 14px;
@@ -47,4 +52,197 @@
 
 .judul{
     margin: 20px;
+}
+
+.card-request-parent{
+    margin-top: 20px;
+    max-width: 100%;
+}
+.card-request{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 130px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+
+.bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.riwayat-bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: first baseline;
+    justify-content: center;
+}
+
+.riwayat-bagian-tempat .nama {
+    margin-right: 20px; 
+}
+
+.no-ruang{
+    font-size: 25px;
+}
+
+.gedung{
+    font-size: 20px;
+}
+
+.bagian-adm {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    margin-left: auto; /* Push .bagian-adm to the end */
+}
+
+.nama.tanggal {
+    margin-right: 20px; /* Add some space between the date and .acceptance */
+    
+}
+
+.acceptance {
+    height: 100%;
+    max-height: 130px;
+    width: 30px;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.teks-req{
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ret-bt{
+    border-radius: 1 rem;
+}
+
+.req-ruangan{
+    margin-top: 20px;
+    background-color: #d6d6d6;
+    border-radius: 40px 40px 0 0;
+}
+
+.req-ruangan-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.teks-ruangan-form{
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.form-kelompok{
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 0;
+    flex-wrap: wrap;
+}
+.form-kelompok-isi{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 10px;
+    padding-left: 20px;
+}
+@media (max-width: 800px) {
+    .form-kelompok {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .form-kelompok-isi {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.form-kelompok-isi label {
+    margin-bottom: 5px;   
+}
+.form-kelompok-isi input {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.form-kelompok-isi select {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.form-kelompok-isi-details{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 410px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+.button-container button {
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-padding{
+    padding: 25px;
+}
+
+.button-container button.tolak {
+    background-color: #e74c3c; /* Red color */
+}
+
+.button-container button.tolak:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.button-container button.terima {
+    background-color: #27ae60; /* Green color */
+}
+
+.button-container button.terima:hover {
+    background-color: #229954; /* Darker green on hover */
+}
+
+.button-kanan-atas{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #d6d6d6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
