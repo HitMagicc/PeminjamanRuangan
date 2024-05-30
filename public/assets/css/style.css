@@ -340,13 +340,13 @@ button[type="submit"]:hover {
 .req-ruangan-form-parent{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    
 }
 .teks-ruangan-form{
     display: flex;
     justify-content: center;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 48px;
 }
 .form-kelompok{
     display: flex;
@@ -358,7 +358,7 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     width: 48%;
-    padding: 10px;
+    padding: 20px;
     padding-left: 20px;
 }
 @media (max-width: 800px) {
@@ -393,8 +393,10 @@ button[type="submit"]:hover {
 }
 .buttonsubmit-kelompok{
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px 70px 3dd 0px;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 100px; padding-right: 150px;
     align-items: center;
 }
 
@@ -468,5 +470,5 @@ button[type="submit"]:hover {
 }
 
 .teks-detail{
-    margin-top: 10px;
+    margin-top: 20px;
 }

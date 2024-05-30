@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 // Route::post('/', [LoginController::class,'authenticate'])->name('auth.login');
 // Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
 Route::get('/', function () {
-    return view('layout.admin.index');
+    return view('components.templates.admin.gedung.index');
 });
 
 //user

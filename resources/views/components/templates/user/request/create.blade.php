@@ -51,14 +51,8 @@
          </div>
         <div class="form-kelompok">
             <div class="form-kelompok-isi">
-                <label for="fakultas">Fakultas</label>
-                <select name="fakultas" id="fakultas">
-                    <option value="">Pilih Fakultas</option>
-                    <option value="MIPA">MIPA</option>
-                    <option value="Hukum">Hukum</option>
-                    <option value="Kedokteran">Kedokteran</option>
-                    <option value="Ilmu Budaya">Ilmu Budaya</option>
-                </select>
+                <label for="jumlah">Jumlah Peserta</label>
+                <input type="number" id="jumlah" name="jumlah">
             </div>
             <div class="form-kelompok-isi">
                 <label for="jurusan">Jurusan</label>
@@ -70,16 +64,7 @@
                 </select>
             </div>
          </div>
-        <div class="form-kelompok">
-            <div class="form-kelompok-isi">
-                <label for="surat-kaprodi">Surat Kaprodi</label>
-                <input type="text" id="surat-kaprodi" name="surat-kaprodi">
-            </div>
-            <div class="form-kelompok-isi">
-                <label for="jumlah">Jumlah Peserta</label>
-                <input type="number" id="jumlah" name="jumlah">
-            </div>
-         </div>
+        
         <div class="buttonsubmit-kelompok">
             <div class="checkbox-text">
                 <input type="checkbox" id="agree" name="agree">

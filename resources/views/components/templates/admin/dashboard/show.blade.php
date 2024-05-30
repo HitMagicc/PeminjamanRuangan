@@ -55,7 +55,7 @@
          </div>
         <div class="form-kelompok">
             <div class="form-kelompok-isi">
-                <label for="fakultas">Tanggal</label>
+                <label for="jumlah">Jumlah Peserta</label>
                 <div class="form-kelompok-isi-details">
                     assaas
                 </div>
@@ -64,20 +64,6 @@
                 <label for="jurusan">Peruntukan</label>
                 <div class="form-kelompok-isi-details">
                     assaas
-                </div>
-            </div>
-         </div>
-        <div class="form-kelompok">
-            <div class="form-kelompok-isi">
-                <label for="jumlah">Jumlah Peserta</label>
-                <div class="form-kelompok-isi-details">
-                    assaas
-                </div>
-            </div>
-            <div class="form-kelompok-isi">
-                <label for="surat-kaprodi">Surat Kaprodi</label>
-                <div class="form-kelompok-isi-details">
-                    <a href="instagram.com">Click To Download!</a>
                 </div>
             </div>
          </div>
