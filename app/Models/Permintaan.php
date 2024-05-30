@@ -12,7 +12,9 @@ class Permintaan extends Model
     protected $table = 'permintaan';
 
     protected $fillable = [
-        'level',
+        'approval',
+        'peruntukan',
+        'tanggal',
     ];
     public function ruangan()
     {

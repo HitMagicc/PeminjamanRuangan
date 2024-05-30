@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Request Ruangan</h5>
-    <button class="req-bt">Request</button>
+    <a href="{{route('request.create')}}"><button class="req-bt">Request</button></a>
 </div>
 <div class="card-request-parent">
     <div class="card-request">
