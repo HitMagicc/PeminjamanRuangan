@@ -126,7 +126,7 @@
 
 .req-ruangan{
     margin-top: 20px;
-    background-color: #d6d6d6;
+    background-color: #d9d9d9;
     border-radius: 40px 40px 0 0;
 }
 
@@ -139,7 +139,7 @@
     display: flex;
     justify-content: center;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 48px;
 }
 .form-kelompok{
     display: flex;
@@ -151,7 +151,7 @@
     display: flex;
     flex-direction: column;
     width: 48%;
-    padding: 10px;
+    padding: 20px;
     padding-left: 20px;
 }
 @media (max-width: 800px) {
@@ -242,7 +242,161 @@
     border: none;
     border-radius: 10px;
     font-size: 16px;
-    background-color: #d6d6d6;
+    background-color: #d9d9d9;
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+.gedung-form-isi{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 50px;
+    align-content: center;
+    box-sizing: border-box
+}
+
+.gedung-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.req-gedung-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    width: 100%; /* Ensure parent container is full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+.button-kanan-atas{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    margin-left:auto;
+    transition: background-color 0.3s ease;
+}
+.gedung-form-button{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 36px;
+    align-content: center;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .gedung-form-isi {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+    .gedung-form-isi input {
+        max-width: 100%; /* Adjust input width for smaller screens */
+    }
+    .gedung-form-button {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .gedung-form-isi {
+        width: 100%; /* Full width on very small screens */
+    }
+    .gedung-form-isi input {
+        max-width: 100%; /* Full width on very small screens */
+    }
+    .gedung-form-button {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+
+.gedung-table{
+    margin-top: 20px;
+    background-color: #d9d9d9;
+    border-radius: 40px 40px 0 0;
+    width: 100%; /* Ensure parent container is full width */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    min-height: 600px;
+}
+
+.thead-tr-gedung {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding-top: 10px; padding-bottom: 10px;
+}
+
+.thead-text {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+/* Buttons */
+.edit-button, .delete-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+    width: 82px;
+    height: 38px;
+
+}
+
+
+.edit-button:hover {
+    background-color: #bbb;
+}
+
+.delete-button:hover {
+    background-color: #bbb;
+}
+
+.tbody-tr-gedung{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    
+}
+.tbody-td-gedung{
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px; margin-bottom: 20px;
+    
+}
+@media (max-width: 1122px) {
+    .tbody-td-gedung {
+        margin-top: 5px; margin-bottom: 5px; /* Full width on very small screens */
+    }
+    .edit-button{
+        margin-bottom: 10px;
+    }
 }

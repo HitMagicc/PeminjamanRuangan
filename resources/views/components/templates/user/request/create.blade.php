@@ -48,33 +48,25 @@
          </div>
         <div class="form-kelompok">
             <div class="form-kelompok-isi">
-                <label for="fakultas">Fakultas</label>
-                <select name="fakultas" id="fakultas">
-                    <option value="">Pilih Fakultas</option>
-                    <option value="MIPA">MIPA</option>
-                    <option value="Hukum">Hukum</option>
-                    <option value="Kedokteran">Kedokteran</option>
-                    <option value="Ilmu Budaya">Ilmu Budaya</option>
-                </select>
+                <label for="jumlah">Jumlah Peserta</label>
+                <input type="number" id="jumlah" name="jumlah">
             </div>
             <div class="form-kelompok-isi">
                 <label for="jurusan">Jurusan</label>
                 <select name="jurusan" id="jurusan">
                     <option value="">Pilih Jurusan</option>
-                    <option value="asdsad">asdsasda</option>
+                    <option value="Matematika">Matematika</option>
+                    <option value="Informatika">Informatika</option>
+                    <option value="Elektro">Elektro</option>
+                    <option value="Statistika">Statistika</option>
+                    <option value="Fisika">Fisika</option>
+                    <option value="Biologi">Biologi</option>
+                    <option value="Kimia">Kimia</option>
+                    <option value="Teknologi-Kimia-Industri">Tekno. Kimia Industri</option>
                 </select>
             </div>
          </div>
-        <div class="form-kelompok">
-            <div class="form-kelompok-isi">
-                <label for="surat-kaprodi">Surat Kaprodi</label>
-                <input type="text" id="surat-kaprodi" name="surat-kaprodi">
-            </div>
-            <div class="form-kelompok-isi">
-                <label for="jumlah">Jumlah Peserta</label>
-                <input type="number" id="jumlah" name="jumlah">
-            </div>
-         </div>
+        
         <div class="buttonsubmit-kelompok">
             <div class="checkbox-text">
                 <input type="checkbox" id="agree" name="agree">
