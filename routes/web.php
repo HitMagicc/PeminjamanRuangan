@@ -9,19 +9,19 @@ use App\Http\Controllers\User\RequestController;
 use App\Http\Controllers\User\RiwayatController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', [LoginController::class,'login'])->name('index.login');
+Route::get('/', [LoginController::class,'login'])->name('index.login');
 
-// Route::post('/', [LoginController::class,'authenticate'])->name('auth.login');
-// Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
-Route::get('/', function () {
-    return view('components.templates.admin.gedung.index');
-});
+Route::post('/', [LoginController::class,'authenticate'])->name('auth.login');
+Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
+// Route::get('/', function () {
+//     return view('components.templates.admin.gedung.index');
+// });
 
 //user
 Route::get('/user/dashboard', [DashboardController::class,'index'])->name('dashboard.index');
 
 Route::get('/user/request', [RequestController::class,'index'])->name('request.index');
-Route::get('/user/request/{$param}', [RequestController::class,'show'])->name('request.show');
+Route::get('/user/request/{id}', [RequestController::class, 'show'])->name('request.show');
 Route::get('/user/request/create', [RequestController::class,'create'])->name('request.create');
 Route::post('/user/request/create', [RequestController::class,'store'])->name('request.store');
 
