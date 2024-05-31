@@ -12,19 +12,22 @@ class Permintaan extends Model
     protected $table = 'permintaan';
 
     protected $fillable = [
+        'id_ruangan',
+        'id_user',
+        'id_berkas',
         'approval',
         'peruntukan',
         'tanggal',
     ];
     public function ruangan()
     {
-        return $this->belongsTo(Ruangan::class);
+        return $this->belongsTo(Ruangan::class,'id_ruangan','id');
     }
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'id_user','id');
     }public function berkas()
     {
-        return $this->belongsTo(Berkas::class);
+        return $this->belongsTo(Berkas::class,'id_berkas','id');
     }
 }

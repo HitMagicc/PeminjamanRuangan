@@ -3,44 +3,33 @@
 @section('mainContent')
 <div class="main-interface">
     <div class="">
-        <h2>Hai, User!</h2>
+        <h2>Hai, {{$user->username}}!</h2>
     </div>
     <div class="full-square-with-lines">
         <div class="square-a">
+            @if ($permintaan === NULL)
+            Belum ada permintaan
+            @else
+            @foreach ($permintaan as $p)
+            <a href="{{route('request.show',$p->id)}}">
             <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
+                    <div class="elemenkotak2">
+                        Nomor Ruangan: {{$p->id_ruangan}}<br>Status: 
+                        @if ($p->approval === 0)
+                        Pending
+                    @endif
                 </div>
                 <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
+                    {{$p->tanggal}}
                 </div>
             </div>
-            <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
-            <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
-            <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
+        </a>
+            @endforeach
+            @endif
             <div class="seemore">
-                See More ->
+                <a href="{{route('request.index')}}">
+                    See More ->
+                </a>
             </div>
         </div>
         
@@ -48,40 +37,29 @@
 
         </div>
         <div class="square-b">
-        <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
+            @if ($history->isEmpty())
+                Belum ada riwayat pemesanan
+            @else
+            @foreach ($history as $h)
             <div class="elemenkotak">
                 <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
+                    {{$h->id_ruangan}}<br>Status: 
+                    @if ($h->approval === 1)
+                        Diterima
+                    @else
+                        Ditolak
+                    @endif
                 </div>
                 <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
+                    {{$h->tanggal}}
                 </div>
             </div>
-            <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
-            <div class="elemenkotak">
-                <div class="elemenkotak2">
-                    Nomor Ruangan<br>Acceptance
-                </div>
-                <div class="elemenkotak2">
-                    DD-MM-YY<br>-<br>DD-MM-YY
-                </div>
-            </div>
+            @endforeach
+            @endif
             <div class="seemore">
-                See More ->
+                <a href="{{route('riwayat.index')}}">
+                    See More ->
+                </a>
             </div>  
         </div>
     </div>

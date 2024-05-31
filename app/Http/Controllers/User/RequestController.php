@@ -13,16 +13,22 @@ use Illuminate\Http\Request;
 class RequestController extends Controller
 {
     public function index(){
-        return view('components.templates.user.request.index', []);
-    }
-
-    public function show($id){
-        dd($id);
-        $permintaan = Permintaan::where('id',$id)->first();
-        return view('components.templates.user.request.show', [
-            'permintaan' =>$permintaan
+        $user = auth()->user();
+        $permintaan = Permintaan::with(['ruangan','user','berkas'])->where('id_user',$user->id)->get();
+        // dd($permintaan);
+        return view('components.templates.user.request.index', [
+            'permintaan'=>$permintaan,
         ]);
     }
+
+    public function show($id) {
+        $permintaan = Permintaan::with(['ruangan.gedung', 'user', 'berkas'])->findOrFail($id);
+        // dd($permintaan);
+        return view('components.templates.user.request.show', [
+            'permintaan' => $permintaan
+        ]);
+    }
+
     public function create(){
         $gedung = Gedung::all();
         $ruangan = Ruangan::all();
@@ -35,20 +41,19 @@ class RequestController extends Controller
     }
 
     public function store(Request $request) {
-        // dd($request);
         $user = auth()->user();
-        
+        // dd($request);
         $berkas = Berkas::create([
             'nama'=>$request->nama,
             'npm'=>$request->npm,
             'no_telp'=>$request->nama,
         ]);
         Permintaan::create([
-            'id_ruangan'=>$request->id_ruangan,
+            'id_ruangan'=>$request->ruangan,
             'id_user'=>$user->id,
             'id_berkas'=>$berkas->id,
-            'approval'=>null,
-            'peruntukan'=>$request->peruntukkan,
+            'approval'=>0,
+            'peruntukan'=>$request->peruntukan,
             'tanggal'=>$request->tanggal,
         ]);
         return to_route('request.index')->with('success', 'Request created succesfully');
