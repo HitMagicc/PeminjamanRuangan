@@ -1,6 +1,6 @@
-@extends('layout.user.index')
-
+@extends('layout.admin.index')
 @section('mainContent')
+
 <div class="main-interface">
     <div class="teks-req">
         <h5>Detail Pemesanan</h5>
@@ -27,4 +27,5 @@
         <div class="teks-detail alasan-detail">alasan</div>
     </div>
 </div>
+
 @endsection

@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Riwayat Pemasanan Ruangan</h5>
-    <button class="req-bt">kembali</button>
+    <button class="button-kanan-atas kembali">kembali</button>
 </div>
 <div class="card-request-parent">
     <div class="card-request">

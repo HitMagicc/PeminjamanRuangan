@@ -67,6 +67,7 @@
     border-radius: 30px;
     margin-top: 20px;
     flex-direction: row;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .bagian-tempat{
@@ -128,6 +129,7 @@
     margin-top: 20px;
     background-color: #d9d9d9;
     border-radius: 40px 40px 0 0;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .req-ruangan-form-parent{
@@ -138,8 +140,7 @@
 .teks-ruangan-form{
     display: flex;
     justify-content: center;
-    padding-right: 20px;
-    padding-top: 48px;
+    padding-top: 30px;
 }
 .form-kelompok{
     display: flex;
@@ -236,16 +237,7 @@
     background-color: #229954; /* Darker green on hover */
 }
 
-.button-kanan-atas{
-    width: 142px;
-    height: 38px;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    background-color: #d9d9d9;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+
 .gedung-form-isi{
     display: flex;
     flex-direction: column;
@@ -290,6 +282,13 @@
     cursor: pointer;
     margin-left:auto;
     transition: background-color 0.3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.kembali:hover{
+    background-color: #b9b9b9;
+}
+.tambah:hover{
+    background-color: #6AC026;
 }
 .gedung-form-button{
     display: flex;
@@ -333,7 +332,7 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    min-height: 600px;
+    min-height: 650px;
 }
 
 .thead-tr-gedung {
@@ -365,7 +364,7 @@
     margin: 0 10px;
     width: 82px;
     height: 38px;
-
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 
@@ -374,7 +373,7 @@
 }
 
 .delete-button:hover {
-    background-color: #bbb;
+    background-color: #E92323;
 }
 
 .tbody-tr-gedung{
@@ -399,4 +398,179 @@
     .edit-button{
         margin-bottom: 10px;
     }
+}
+
+.kotak-atas{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75vw;
+}
+
+.kotak-satu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.show-text{
+    margin-left: 20px;
+}
+
+.garis{
+    align-self: center;
+    display: flex;
+    height: 125px;
+    background-color: #000000;
+    width: 1px;
+    margin:0px 20px;
+
+}
+
+.kotak-dua{
+    display: flex;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+}
+
+.tulisan-detail{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.teks-detail{
+    margin-top: 20px;
+}
+
+.ruangan-form-isi{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi-field{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi select{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.buttonsubmit-kelompok{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 100px; padding-right: 150px;
+    align-items: center;
+}
+
+.checkbox-text{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+.checkbox-text input{
+    margin-right: 15px;
+}
+.checkbox-text label{
+    display: flex;
+    margin-right: 30px;
+}
+.button{
+    display: flex;
+    max-height: 100px;
+    margin-left: auto;
+}
+
+.button-submit{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left:auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.button-submit:hover {
+    background-color: #6AC026;
+}
+.buttonsubmit-ruangan{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-content: center;
+    box-sizing: border-box
 }
