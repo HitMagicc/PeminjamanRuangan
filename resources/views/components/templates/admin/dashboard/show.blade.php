@@ -13,7 +13,7 @@
     <div class="req-ruangan-form-parent">
         <div class="form-kelompok">
             <div class="form-kelompok-isi">
-                <label for="gedung">Nomor Permintaan</label>
+                <label for="no-permintaan">Nomor Permintaan</label>
                 <div class="form-kelompok-isi-details">
                     aaa
                 </div>

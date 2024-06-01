@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Request Ruangan</h5>
-    <a href="{{route('request.create')}}"><button class="req-bt">Request</button></a>
+    <a href="{{route('request.create')}}"><button class="button-kanan-atas tambah">Request</button></a>
 </div>
 @if ($permintaan->isEmpty())
     Belum ada permintaan peminjaman ruangan

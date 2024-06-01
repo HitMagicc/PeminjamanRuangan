@@ -4,6 +4,7 @@
 <div class="main-interface">
     <div class="teks-req">
         <h5>Detail Pemesanan</h5>
+        <button class="button-kanan-atas kembali">Kembali</button>
     </div>
     <div class="kotak-atas">
         <div class="kotak-satu">
