@@ -17,6 +17,7 @@ Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
 //     return view('components.templates.admin.gedung.index');
 // });
 
+
 //user
 Route::get('/user/dashboard', [DashboardController::class,'index'])->name('dashboard.index');
 
