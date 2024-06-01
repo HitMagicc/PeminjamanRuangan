@@ -16,10 +16,6 @@ return new class extends Migration
             $table->string('nama');
             $table->string('npm');
             $table->string('no_telp');
-            $table->string('kegiatan');
-            $table->date('tanggal_awal');
-            $table->date('tanggal_akhir');
-            $table->string('jumlah_peserta');
             $table->timestamps();
         });
     }
