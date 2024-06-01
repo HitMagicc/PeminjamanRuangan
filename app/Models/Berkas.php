@@ -15,10 +15,6 @@ class Berkas extends Model
         'nama',
         'npm',
         'no_telp',
-        'kegiatan',
-        'tanggal_awal',
-        'tanggal_akhir',
-        'jumlah_peserta',
     ];
 
     public function permintaan()

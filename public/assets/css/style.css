@@ -99,6 +99,11 @@ button[type="submit"]:hover {
     flex-wrap: wrap;
 }
 
+.btn-group-vertical>.btn, .btn-group>.btn {
+    background-color: #355A92;
+    border: none;
+}
+
 .group-item
 {
     
@@ -136,7 +141,7 @@ button[type="submit"]:hover {
 }
 .user-parent {
     margin-top: auto; /* Pushes the "User" section to the bottom */
-    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    margin-bottom: auto; /* Optional: Bottom margin for spacing */
     display: flex;
     align-items: center;
 }
@@ -207,6 +212,12 @@ button[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
 }
+
+.square-a a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .square-b{
     width: 500px;
     padding: 20px;
@@ -246,6 +257,11 @@ button[type="submit"]:hover {
     width: 420px;
     height: 50px;
     margin-top: auto;
+}
+
+.seemore a{
+    color: inherit;
+    text-decoration: none;
 }
 
 .teks-req{
@@ -289,6 +305,12 @@ button[type="submit"]:hover {
 .card-request-parent{
     margin-top: 20px;
 }
+
+.card-request-parent a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 .card-request{
     display: flex;
     justify-content: space-between;
@@ -483,4 +505,10 @@ button[type="submit"]:hover {
 
 .teks-detail{
     margin-top: 20px;
+}
+
+.teks-gaada{
+    display: flex;
+    margin-top: 20px;
+    justify-items: center;
 }

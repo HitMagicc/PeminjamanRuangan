@@ -16,7 +16,9 @@ return new class extends Migration
             $table->foreignId('id_ruangan')->constrained('ruangan');
             $table->foreignId('id_user')->constrained('user');
             $table->foreignId('id_berkas')->constrained('berkas');
-            $table->enum('approval',[0,1]);
+            $table->integer('approval');
+            $table->string('peruntukan');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }

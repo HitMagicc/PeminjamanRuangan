@@ -29,10 +29,21 @@
         </a>
     </div>
     <div class="flex-grow"></div>
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <div class="user-parent">
+                <img class="vector-icon usersvg" alt="" src="{{asset('assets/img/user.svg')}}">
+                <div class="user">User</div>
+            </div>
+        </button>
+        <ul class="dropdown-menu">
+            <form action="{{route('auth.logout')}}" method="post">
+                @csrf
+                <li><button type="submit" style="background-color: #fff;color:black">Logout</button></li>
+            </form>
+        </ul>
+    </div>
     <a href="">
-        <div class="user-parent">
-            <img class="vector-icon usersvg" alt="" src="{{asset('assets/img/user.svg')}}">
-            <div class="user">User</div>
-        </div>
+        
     </a>
 </div>

@@ -20,14 +20,14 @@ class LoginController extends Controller
         if (Auth::attempt($credential)) {
             $request->session()->regenerate();
             $user = Auth::user();
-            dd($user);
+            // dd($user);
             $roles = $user->level;
             switch ($roles[0]) {
                 case (0):
-                    return redirect()->intended(route('member.home.index'));
+                    return redirect()->intended(route('dashboard.index'));
                     break;
                 case (1):
-                    return redirect()->intended(route('ustadz.home.index'));
+                    return redirect()->intended(route('admin.dashboard.index'));
                     break;
                 default:
                     return redirect()->back()->with('error', 'Role malfunction');
