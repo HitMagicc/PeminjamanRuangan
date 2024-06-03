@@ -51,8 +51,8 @@
          </div>
         <div class="form-kelompok">
             <div class="form-kelompok-isi">
-                <label for="jumlah">Jumlah Peserta</label>
-                <input type="number" id="jumlah" name="jumlah">
+                <label for="jumlah">Nomor Telepon</label>
+                <input type="number" id="no_telp" name="no_telp">
             </div>
             <div class="form-kelompok-isi">
                 <label for="jurusan">Jurusan</label>

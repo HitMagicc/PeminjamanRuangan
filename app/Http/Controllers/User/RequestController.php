@@ -33,6 +33,7 @@ class RequestController extends Controller
         $gedung = Gedung::all();
         $ruangan = Ruangan::all();
         $jurusan = Jurusan::all();
+        // dd($gedung);
         return view('components.templates.user.request.create', [
             'gedung'=>$gedung,
             'ruangan'=>$ruangan,
@@ -44,9 +45,10 @@ class RequestController extends Controller
         $user = auth()->user();
         // dd($request);
         $berkas = Berkas::create([
+            'id_jurusan'=>$request->jurusan,
             'nama'=>$request->nama,
             'npm'=>$request->npm,
-            'no_telp'=>$request->nama,
+            'no_telp'=>$request->no_telp,
         ]);
         Permintaan::create([
             'id_ruangan'=>$request->ruangan,

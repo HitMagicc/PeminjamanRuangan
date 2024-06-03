@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('permintaan', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_ruangan')->constrained('ruangan');
-            $table->foreignId('id_user')->constrained('user');
-            $table->foreignId('id_berkas')->constrained('berkas');
+            $table->foreignId('id_ruangan')->constrained('ruangan')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('id_user')->constrained('user')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreignId('id_berkas')->constrained('berkas')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('approval');
             $table->string('peruntukan');
             $table->date('tanggal');

@@ -3,50 +3,54 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Ruangan</h5>
-    <button class="button-kanan-atas tambah">Tambah</button>
+    <a href="{{ route('admin.ruangan.create') }}">
+        <button class="button-kanan-atas tambah">Tambah</button>
+    </a>
     <!--button class="req-bt">Kembali</button-->
 </div>
 <div class="req-ruangan">
-    <table class="gedung-table">
+    <table class="gedung-table" id="ruanganTable">
         <thead>
             <tr class="thead-tr-gedung">
-                <th class="thead-text">Nomor Gedung</th>
+                <th class="thead-text">Nomor Ruangan</th>
                 <th class="thead-text">Jenis Ruangan</th>
                 <th class="thead-text">Tempat Gedung</th>
+                <th class="thead-text">Kapasitas</th>
                 <th class="thead-text">Aksi</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="tbody-tr-gedung" style="background-color:#BEBEBE">
-                <td class="tbody-td-gedung" style="background-color:#BEBEBE">xxxx-xxxx-xxxx</td>
-                <td class="tbody-td-gedung">Gedung D6</td>
-                <td class="tbody-td-gedung">Dekat Jembatan</td>
-                <td class="tbody-td-gedung">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Hapus</button>
-                </td>
-            </tr>
-            <tr class="tbody-tr-gedung" >
-                <td class="tbody-td-gedung" >xxxx-xxxx-xxxx</td>
-                <td class="tbody-td-gedung">Gedung D6</td>
-                <td class="tbody-td-gedung">Dekat Jembatan</td>
-                <td class="tbody-td-gedung">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Hapus</button>
-                </td>
-            </tr>
-            <tr class="tbody-tr-gedung" style="background-color:#BEBEBE">
-                <td class="tbody-td-gedung" style="background-color:#BEBEBE">xxxx-xxxx-xxxx</td>
-                <td class="tbody-td-gedung">Gedung D6</td>
-                <td class="tbody-td-gedung">Dekat Jembatan</td>
-                <td class="tbody-td-gedung">
-                    <button class="edit-button">Edit</button>
-                    <button class="delete-button">Hapus</button>
-                </td>
-            </tr>
-            
-            
+            @foreach ($ruangan as $r)
+                <tr class="tbody-tr-gedung" style="background-color: {{ $r->id % 2 == 0 ? '#BEBEBE' : '#FFFFFF' }}">
+                    <td class="tbody-td-gedung">{{ $r->id }}</td>
+                    <td class="tbody-td-gedung">
+                        @if ($r->jenis === 0) 
+                        Ruangan Kelas
+                        @elseif($r->jenis === 1)
+                        Ruangan Aula
+                        @else
+                        Laboratorium
+                        @endif
+                    </td>
+                    <td class="tbody-td-gedung">{{ $r->gedung->alamat }}</td>
+                    <td class="tbody-td-gedung">{{ $r->kapasitas }}</td>
+                    <td class="tbody-td-gedung">
+                        <a href="{{ route('admin.ruangan.edit', $r->id) }}" class="btn edit-button">Edit</a>
+                        <form action="{{ route('admin.ruangan.delete', $r->id) }}" method="POST" style="display:inline-block;">
+                            @csrf
+                            @method('post')
+                            <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure?')">Hapus</button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>   
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#ruanganTable').DataTable();
+    });
+</script>
 @endsection

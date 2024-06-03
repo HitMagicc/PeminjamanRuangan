@@ -20,4 +20,9 @@ class Jurusan extends Model
     {
         return $this->belongsTo(Gedung::class);
     }
+
+    public function berkas()
+    {
+        return $this->hasMany(Berkas::class,'id_jurusan');
+    }
 }

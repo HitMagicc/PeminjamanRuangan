@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username');
             $table->string('password');
-            $table->enum('level',[0,1
-        ]);
+            $table->tinyInteger('level');
             $table->timestamps();
         });
 
