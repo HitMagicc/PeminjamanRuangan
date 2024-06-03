@@ -22,7 +22,7 @@ class LoginController extends Controller
             $user = Auth::user();
             // dd($user);
             $roles = $user->level;
-            switch ($roles[0]) {
+            switch ($roles) {
                 case (0):
                     return redirect()->intended(route('dashboard.index'));
                     break;

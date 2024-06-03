@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Detail Permintaan</h5>
-    <button class="button-kanan-atas">Kembali</button>
+    <button class="button-kanan-atas" onclick="window.history.back()">Kembali</button>
     <!--button class="req-bt">Kembali</button-->
 </div>
 <div class="req-ruangan">
@@ -15,13 +15,13 @@
             <div class="form-kelompok-isi">
                 <label for="no-permintaan">Nomor Permintaan</label>
                 <div class="form-kelompok-isi-details">
-                    aaa
+                    {{$p->id}}
                 </div>
             </div>
             <div class="form-kelompok-isi">
                 <label for="ruangan">Nama Pengaju</label>
                 <div class="form-kelompok-isi-details">
-                    asdasdasds
+                    {{$p->berkas->nama}}
                 </div>
             </div>
          </div>
@@ -29,13 +29,13 @@
             <div class="form-kelompok-isi">
                 <label for="tanggal">Gedung</label>
                 <div class="form-kelompok-isi-details">
-                    aaaa
+                    {{$p->ruangan->gedung->nama_gedung}}
                 </div>
             </div>
             <div class="form-kelompok-isi">
                 <label for="peruntukan">NPM Pengaju</label>
                 <div class="form-kelompok-isi-details">
-                    aaaa
+                    {{$p->berkas->npm}}
                 </div>
             </div>
          </div>
@@ -43,13 +43,13 @@
             <div class="form-kelompok-isi">
                 <label for="npm">Ruangan</label>
                 <div class="form-kelompok-isi-details">
-                    assaas
+                    {{$p->ruangan->nama_ruangan}}
                 </div>
             </div>
             <div class="form-kelompok-isi">
                 <label for="nama">Fakultas-Jurusan</label>
                 <div class="form-kelompok-isi-details">
-                    assaas
+                    {{$p->berkas->jurusan->nama_jurusan}}
                 </div>
             </div>
          </div>
@@ -57,16 +57,16 @@
             <div class="form-kelompok-isi">
                 <label for="jumlah">Jumlah Peserta</label>
                 <div class="form-kelompok-isi-details">
-                    assaas
+                    {{$p->ruangan->kapasitas}}
                 </div>
             </div>
             <div class="form-kelompok-isi">
                 <label for="jurusan">Peruntukan</label>
                 <div class="form-kelompok-isi-details">
-                    assaas
+                    {{$p->peruntukan}}
                 </div>
             </div>
-         </div>
+        </div>
         <div class="form-kelompok">
             <div class="button-container">
                 <div class="button-padding">

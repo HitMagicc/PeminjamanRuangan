@@ -6,27 +6,35 @@
     <button class="button-kanan-atas">Histori</button>
 </div>
 <div class="card-request-parent">
-    <div class="card-request">
-        <div class="riwayat-bagian-tempat">
-            <div class="nama no-ruang">Nomor Permintaan</div>
-            <div class="nama gedung">Gedung</div>
-            <div class="nama fakultas">Ruangan</div>
+    @if ($permintaan->isEmpty())
+        Belum ada permintaan
+    @else
+        
+    @foreach ($permintaan as $p)
+        <div class="card-request-parent">
+            <a href="{{ route('admin.dashboard.show', $p->id) }}">
+                <div class="card-request">
+                    <div class="bagian-tempat">
+                        <div class="nama no-ruang">No: {{ $p->id }}</div>
+                        <div class="nama gedung">Gedung: {{ $p->ruangan->gedung->nama_gedung }}</div>
+                        <div class="nama fakultas">Nama Ruangan: {{ $p->ruangan->nama_ruangan }}</div>
+                    </div>
+                    <div class="bagian-adm">
+                        <div class="nama tanggal">{{ $p->tanggal }}</div>
+                        <div class="acceptance" style="background-color:
+                            @if($p->approval === 1)
+                                #6AC026
+                            @elseif($p->approval === 0)
+                                #E2E632
+                            @else
+                                #E92323
+                            @endif">
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-        <div class="bagian-adm">
-            <div class="nama tanggal">dd/mm/yyyy - dd/mm/yyyy</div>
-            <div class="acceptance" style="background-color: #E2E632"></div>
-        </div>
-    </div>
-    <div class="card-request">
-        <div class="riwayat-bagian-tempat">
-            <div class="nama no-ruang">Nomor Permintaan</div>
-            <div class="nama gedung">Gedung</div>
-            <div class="nama fakultas">Ruangan</div>
-        </div>
-        <div class="bagian-adm">
-            <div class="nama tanggal">dd/mm/yyyy - dd/mm/yyyy</div>
-            <div class="acceptance" style="background-color: #E2E632"></div>
-        </div>
-    </div>
+    @endforeach
+    @endif
 </div>
 @endsection
