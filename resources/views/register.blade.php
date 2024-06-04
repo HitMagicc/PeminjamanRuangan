@@ -13,7 +13,7 @@
 <body class="login-blade">
     <div class="background">
         <div class="login-container d-flex">
-            <form action="{{route('auth.login')}}" method="POST" class="login-form me-4" >
+            <form action="{{route('sign-up')}}" method="POST" class="login-form me-4" >
                 @csrf
                 <img src="{{asset('assets/img/login.svg')}}" alt="" class="foto-login">
                 <div class="form-group">
@@ -26,12 +26,12 @@
                 </div>
                 <div class="form-group">
                     <label for="password1">Password</label>
-                    <input type="password" id="password1" name="password1" placeholder="masukkan password anda" required>
+                    <input type="password" placeholder="Masukkan Password" id="password" name="password" required>
                 </div>
                 <div class="form-group">
                     <label for="password2">Confirm Password</label>
-                    <input type="password" id="password2" name="password2" placeholder="masukkan kembali password anda" required>
-                    <h6><a href="login">sudah ada akun? klik di sini</a></h6>
+                    <input type="password" placeholder="Masukkan kembali password anda" id="confirm_password" required>
+                    <h6><a href="{{route('index.login')}}">sudah ada akun? klik di sini</a></h6>
                 </div>
                 <button type="submit">Login</button>
             </form>
@@ -65,4 +65,20 @@
         </div>
     </div>
 </body>
+<script>
+    var password = document.getElementById("password")
+        , confirm_password = document.getElementById("confirm_password");
+
+    function validatePassword(){
+        if(password.value != confirm_password.value) {
+            confirm_password.setCustomValidity("Passwords Don't Match");
+        } else {
+            confirm_password.setCustomValidity('');
+        }
+    }
+
+    password.onchange = validatePassword;
+    confirm_password.onkeyup = validatePassword;
+</script>
+
 </html>

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
@@ -51,5 +53,23 @@ class LoginController extends Controller
     }
     public function register(){
         return view('register');
+    }
+
+    public function signup(Request $request) {
+        // dd($request);
+        // $request->validate([
+        //     'username' => 'required|unique:user',
+        //     'name' => 'required',
+        //     'password' => 'required',
+        // ]);
+
+        User::create([
+            'username'=> $request->username,
+            'name'=> $request->nama,
+            'password' =>Hash::make($request->password),
+            'level'=>0
+        ]);
+
+        return view('login');
     }
 }
