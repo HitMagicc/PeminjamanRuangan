@@ -13,13 +13,10 @@ return new class extends Migration
     {
         Schema::create('berkas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_jurusan')->constrained('jurusan')->onDelete('cascade')->onUpdate('cascade'); 
             $table->string('nama');
             $table->string('npm');
             $table->string('no_telp');
-            $table->string('kegiatan');
-            $table->date('tanggal_awal');
-            $table->date('tanggal_akhir');
-            $table->string('jumlah_peserta');
             $table->timestamps();
         });
     }

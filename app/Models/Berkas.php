@@ -12,17 +12,19 @@ class Berkas extends Model
     protected $table = 'berkas';
 
     protected $fillable = [
+        'id_jurusan',
         'nama',
         'npm',
         'no_telp',
-        'kegiatan',
-        'tanggal_awal',
-        'tanggal_akhir',
-        'jumlah_peserta',
     ];
 
     public function permintaan()
     {
         return $this->belongsTo(Permintaan::class);
+    }
+
+    public function jurusan()
+    {
+        return $this->belongsTo(Jurusan::class,'id_jurusan');
     }
 }

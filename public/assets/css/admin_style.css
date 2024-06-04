@@ -1,14 +1,22 @@
 .rectangle-parent{
+    
+    height: 100vh;
     display: flex;
     flex-direction: column;
     width: 264px; /* Adjust width as needed */
-    height: 100vh;
     background-color: #355A92; /* Background color for the sidebar */
     padding: 10px; /* Padding for some spacing */
     color: #ffffff;
     border-top-right-radius: 30px;
     /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);  Optional: Shadow for depth */
+    flex-wrap: wrap;
 }
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    background-color: #355A92;
+    border: none;
+}
+
 .dashboard, .request, .riwayat, .user-parent {
     display: flex;
     align-items: center;
@@ -18,15 +26,26 @@
     margin-right: 10px;
     font-size: 16px; /* Font size for the text */
     padding-left: 20px; /* Add left padding to move content to the right */
-    height: 61px;
-    
+    height: 61px; 
 }
 
+.rectangle-parent a {
+    color: inherit; /* Inherit color from parent */
+    text-decoration: none; /* Remove underline */
+}
+
+.rectangle-parent a:hover {
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.merging-index{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    margin:  30px;
+}
 .group-item{
-    background-color: #ffffff;
-    border-radius: 14px;
-    color: #355A92; /* Text color */
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .riwayat-pemesanan{
@@ -47,4 +66,674 @@
 
 .judul{
     margin: 20px;
+}
+
+.card-request-parent{
+    margin-top: 20px;
+    max-width: 100%;
+}
+.card-request{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: 130px;
+    background-color: #D9D9D9;
+    border-radius: 30px;
+    margin-top: 20px;
+    flex-direction: row;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.riwayat-bagian-tempat{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    align-items: first baseline;
+    justify-content: center;
+}
+
+.riwayat-bagian-tempat .nama {
+    margin-right: 20px; 
+}
+
+.no-ruang{
+    font-size: 25px;
+}
+
+.gedung{
+    font-size: 20px;
+}
+
+.bagian-adm {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center vertically */
+    margin-left: auto; /* Push .bagian-adm to the end */
+}
+
+.nama.tanggal {
+    margin-right: 20px; /* Add some space between the date and .acceptance */
+    
+}
+
+.acceptance {
+    height: 100%;
+    max-height: 130px;
+    width: 30px;
+    border-radius: 0px 30px 30px 0px;
+}
+
+.teks-req{
+    width: 75vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ret-bt{
+    border-radius: 1 rem;
+}
+
+.req-ruangan{
+    margin-top: 20px;
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.req-ruangan-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.teks-ruangan-form{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.form-kelompok{
+    display: flex;
+    justify-content: center;
+    padding: 0 50px 0;
+    flex-wrap: wrap;
+}
+.form-kelompok-isi{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 20px;
+    padding-left: 20px;
+}
+@media (max-width: 800px) {
+    .form-kelompok {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .form-kelompok-isi {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+.form-kelompok-isi label {
+    margin-bottom: 5px;   
+}
+.form-kelompok-isi input {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+}
+.form-kelompok-isi select {
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.form-kelompok-isi-details{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    max-width: 410px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    padding-bottom:5px;
+}
+
+.button-container button {
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.button-padding{
+    padding: 25px;
+}
+
+.button-container button.tolak {
+    background-color: #e74c3c; /* Red color */
+}
+
+.button-container button.tolak:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.button-container button.terima {
+    background-color: #27ae60; /* Green color */
+}
+
+.button-container button.terima:hover {
+    background-color: #229954; /* Darker green on hover */
+}
+
+
+.gedung-form-isi{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 50px;
+    align-content: center;
+    box-sizing: border-box
+}
+
+.gedung-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.req-gedung-form-parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
+    width: 100%; /* Ensure parent container is full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+.button-kanan-atas{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    margin-left:auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.kembali:hover{
+    background-color: #b9b9b9;
+}
+.tambah:hover{
+    background-color: #6AC026;
+}
+
+.gedung-form-button{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 36px;
+    align-content: center;
+    box-sizing: border-box;
+}
+@media (max-width: 900px) {
+    .gedung-form-isi {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+    .gedung-form-isi input {
+        max-width: 100%; /* Adjust input width for smaller screens */
+    }
+    .gedung-form-button {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .gedung-form-isi {
+        width: 100%; /* Full width on very small screens */
+    }
+    .gedung-form-isi input {
+        max-width: 100%; /* Full width on very small screens */
+    }
+    .gedung-form-button {
+        width: 100%; /* Full width on very small screens */
+    }
+}
+
+    /* .gedung-table{
+        margin-top: 20px;
+        background-color: #d9d9d9;
+        border-radius: 40px 40px 0 0;
+        width: 100%; /* Ensure parent container is full width */
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        min-height: 650px; */
+}
+
+/* .thead-tr-gedung {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding-top: 10px; padding-bottom: 10px; */
+}
+
+/* .thead-text {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px; */
+}
+
+
+
+/* Buttons */
+.edit-button, .delete-button {
+    background-color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+    width: 82px;
+    height: 38px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+
+.edit-button:hover {
+    background-color: #bbb;
+}
+
+.delete-button:hover {
+    background-color: #E92323;
+}
+
+
+.kotak-atas{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 75vw;
+}
+
+.kotak-satu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.show-text{
+    margin-left: 20px;
+}
+
+.garis{
+    align-self: center;
+    display: flex;
+    height: 125px;
+    background-color: #000000;
+    width: 1px;
+    margin:0px 20px;
+
+}
+
+.kotak-dua{
+    display: flex;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    height: 120px;
+    background-color: #D9D9D9;
+    width: 60vh;
+    border-radius: 20px;
+}
+
+.tulisan-detail{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.teks-detail{
+    margin-top: 20px;
+}
+
+.ruangan-form-isi{
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi-field{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi input{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px 0px;
+    width: 100%; /* Make width flexible */
+    max-width: 800px; /* Maintain max-width */ max-width: 800px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box
+}
+.ruangan-form-isi select{
+    border-radius: 12px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    height: 56px;
+    padding:0px 20px;
+    width: 100%;
+    max-width: 800px;
+    border: 1px solid #ccc;
+    appearance: none;
+}
+.buttonsubmit-kelompok{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 100px; padding-right: 150px;
+    align-items: center;
+}
+
+.card-request-parent a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.checkbox-text{
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+.checkbox-text input{
+    margin-right: 15px;
+}
+.checkbox-text label{
+    display: flex;
+    margin-right: 30px;
+}
+.button{
+    display: flex;
+    max-height: 100px;
+    margin-left: auto;
+    justify-content:center ;
+    align-items: center;
+}
+
+.button-submit{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
+    margin-left:auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.button-submit:hover {
+    background-color: #6AC026;
+}
+.buttonsubmit-ruangan{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    align-content: center;
+    box-sizing: border-box
+}
+
+.group-item.active {
+    background-color: #ffffff;
+    border-radius: 14px;
+    color: #355A92; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.teks-judul{
+    margin: 20px;
+}
+
+.riwayat{
+    display: flex ;
+}
+
+.vector-icon {
+    display: flex;
+    width: 24px; /* Icon width */
+    height: 24px; /* Icon height */
+    flex-shrink: 0; /* Prevent icons from shrinking */
+    margin-right: 10px; /* Initial space between icon and text */
+}
+.user-parent {
+    margin-top: auto; /* Pushes the "User" section to the bottom */
+    margin-bottom: auto; /* Optional: Bottom margin for spacing */
+    display: flex;
+    align-items: center;
+}
+
+
+
+#openModalBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none ; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;   
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    backdrop-filter: blur(3px);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #d9d9d9;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-button-parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+.modal-button{
+    display: flex;
+    border-radius: 15px;
+}
+
+.modal-alasan-field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    height: 155px;
+}
+.modal-alasan-field textarea{
+    display: flex;
+    flex-direction: column;
+    resize: none;
+    width: 100%;
+    padding: 20px;
+    padding-left: 20px;
+    height: 155px;
+    border-radius: 12px;
+    border: none;
+}
+.modal-button{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

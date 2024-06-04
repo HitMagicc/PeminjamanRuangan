@@ -19,9 +19,9 @@ class User extends Authenticatable
     protected $table = 'user';
     protected $fillable = [
         'name',
-        'email',
+        'username',
         'password',
-        'enum'
+        'level'
     ];
     public function permintaan()
     {

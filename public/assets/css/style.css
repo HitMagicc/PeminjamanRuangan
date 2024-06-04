@@ -71,7 +71,11 @@ button[type="submit"]:hover {
 
 .vl {
     border-left: 2px solid #ccc;
-    height: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+}
+.vl-register {
+    border-left: 2px solid #ccc;
+    height: 550px; /* Adjust as needed */
 }
 
 /* Style the carousel container */
@@ -97,6 +101,11 @@ button[type="submit"]:hover {
     border-top-right-radius: 30px;
     /*box-shadow: 2px 0 5px rgba(0,0,0,0.1);  Optional: Shadow for depth */
     flex-wrap: wrap;
+}
+
+.btn-group-vertical>.btn, .btn-group>.btn {
+    background-color: #355A92;
+    border: none;
 }
 
 .group-item
@@ -136,7 +145,7 @@ button[type="submit"]:hover {
 }
 .user-parent {
     margin-top: auto; /* Pushes the "User" section to the bottom */
-    margin-bottom: 10px; /* Optional: Bottom margin for spacing */
+    margin-bottom: auto; /* Optional: Bottom margin for spacing */
     display: flex;
     align-items: center;
 }
@@ -207,6 +216,12 @@ button[type="submit"]:hover {
     flex-direction: column;
     align-items: center;
 }
+
+.square-a a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .square-b{
     width: 500px;
     padding: 20px;
@@ -248,6 +263,11 @@ button[type="submit"]:hover {
     margin-top: auto;
 }
 
+.seemore a{
+    color: inherit;
+    text-decoration: none;
+}
+
 .teks-req{
     width: 75vw;
     display: flex;
@@ -268,10 +288,33 @@ button[type="submit"]:hover {
     border: none;
     height: 38px;
 }
-
+.button-kanan-atas{
+    width: 142px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: #d9d9d9;
+    cursor: pointer;
+    margin-left:auto;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.kembali:hover{
+    background-color: #b9b9b9;
+}
+.tambah:hover{
+    background-color: #6AC026;
+}
 .card-request-parent{
     margin-top: 20px;
 }
+
+.card-request-parent a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 .card-request{
     display: flex;
     justify-content: space-between;
@@ -280,6 +323,7 @@ button[type="submit"]:hover {
     background-color: #D9D9D9;
     border-radius: 30px;
     margin-top: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .bagian-tempat{
@@ -334,13 +378,13 @@ button[type="submit"]:hover {
 .req-ruangan-form-parent{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    
 }
 .teks-ruangan-form{
     display: flex;
     justify-content: center;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 48px;
 }
 .form-kelompok{
     display: flex;
@@ -352,7 +396,7 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     width: 48%;
-    padding: 10px;
+    padding: 20px;
     padding-left: 20px;
 }
 @media (max-width: 800px) {
@@ -387,8 +431,10 @@ button[type="submit"]:hover {
 }
 .buttonsubmit-kelompok{
     display: flex;
-    justify-content: space-evenly;
-    padding: 20px 70px 3dd 0px;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 100px; padding-right: 150px;
     align-items: center;
 }
 
@@ -453,6 +499,21 @@ button[type="submit"]:hover {
     border-radius: 20px;
 }
 
+button.download-button{
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+button.download-button:hover{
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    background-color: #355A92;
+}
+
+
 .tulisan-detail{
     margin-top: 20px;
     display: flex;
@@ -462,5 +523,11 @@ button[type="submit"]:hover {
 }
 
 .teks-detail{
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.teks-gaada{
+    display: flex;
+    margin-top: 20px;
+    justify-items: center;
 }
