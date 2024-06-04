@@ -20,6 +20,7 @@ Route::post('/logout', [LoginController::class,'logout'])->name('auth.logout');
 //     return view('components.templates.admin.gedung.index');
 // });
 Route::get('/register', [LoginController::class,'register'])->name('register');
+Route::post('/signup', [LoginController::class,'signup'])->name('sign-up');
 
 
 //user

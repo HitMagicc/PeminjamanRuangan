@@ -23,7 +23,7 @@
                 <div class="form-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" placeholder="masukkan password anda" required>
-                    <h6><a href="register">belum ada akun? klik di sini</a></h6>
+                    <h6><a href="{{route('register')}}">belum ada akun? klik di sini</a></h6>
                 </div>
                 <button type="submit">Login</button>
             </form>
