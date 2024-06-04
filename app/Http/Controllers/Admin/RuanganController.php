@@ -44,8 +44,8 @@ class RuanganController extends Controller
     public function edit($id) {
         $gedung = Gedung::all();
         $ruangan = Ruangan::findOrFail($id);
-        dd($ruangan);
-        return view('components.templates.admin.ruangan.create', [
+        // dd($ruangan);
+        return view('components.templates.admin.ruangan.edit', [
             'ruangan'=>$ruangan,
             'gedung'=>$gedung,
         ]);
@@ -53,15 +53,22 @@ class RuanganController extends Controller
 
     public function update(Request $request, $id) {
         $ruangan = Ruangan::findOrFail($id);
+        // dd($request);
         $ruangan->update([
             'id_gedung'=>$request->id_gedung,
             'nama_ruangan'=>$request->nama_ruangan,
             'jenis'=>$request->jenis_ruangan,
-            'kapasitas'=>$request->jenis_kapasitas,
+            'kapasitas'=>$request->kapasitas_ruangan,
         ]);
         return to_route('admin.ruangan.show',$id)->with([
             'success' => 'Ruangan updated successfully',
             'ruangan' => $ruangan
         ]);
+    }
+
+    public function delete($id){
+        $ruangan = Ruangan::findOrFail($id);
+        $ruangan->delete();
+        return to_route('admin.ruangan.index')->with('success' , 'ruangan deleted successfully');
     }
 }

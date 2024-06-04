@@ -14,7 +14,7 @@ class RequestController extends Controller
 {
     public function index(){
         $user = auth()->user();
-        $permintaan = Permintaan::with(['ruangan','user','berkas'])->where('id_user',$user->id)->get();
+        $permintaan = Permintaan::with(['ruangan','user','berkas'])->where('id_user',$user->id)->where('approval',0)->get();
         // dd($permintaan);
         return view('components.templates.user.request.index', [
             'permintaan'=>$permintaan,
@@ -46,7 +46,7 @@ class RequestController extends Controller
         // dd($request);
         $berkas = Berkas::create([
             'id_jurusan'=>$request->jurusan,
-            'nama'=>$request->nama,
+            'nama'=>$request->nama, 
             'npm'=>$request->npm,
             'no_telp'=>$request->no_telp,
         ]);

@@ -30,7 +30,7 @@
         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="user-parent">
                 <img class="vector-icon usersvg" alt="" src="{{ asset('assets/img/user.svg') }}">
-                <div class="user">User</div>
+                <div class="user">Admin</div>
             </div>
         </button>
         <ul class="dropdown-menu">

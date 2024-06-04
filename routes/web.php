@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\GedungController as AdminGedungController;
 use App\Http\Controllers\Admin\RiwayatController as AdminRiwayatController;
 use App\Http\Controllers\Admin\RuanganController;
+use App\Http\Controllers\DownloadController;
 use App\Http\Controllers\GedungController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\User\DashboardController;
@@ -30,6 +31,8 @@ Route::get('/user/request/create', [RequestController::class,'create'])->name('r
 Route::post('/user/request/store', [RequestController::class,'store'])->name('request.store');
 Route::get('/user/request/{id}', [RequestController::class, 'show'])->name('request.show');
 
+Route::get('/user/request-download/{id}', [DownloadController::class, 'download'])->name('request.download');
+
 // Riwayat Routes
 Route::get('/user/riwayat', [RiwayatController::class,'index'])->name('riwayat.index');
 Route::get('/user/riwayat/{id}', [RiwayatController::class,'show'])->name('riwayat.show');
@@ -38,7 +41,7 @@ Route::get('/user/riwayat/{id}', [RiwayatController::class,'show'])->name('riway
 //admin
 Route::get('/admin/dashboard', [AdminDashboardController::class,'index'])->name('admin.dashboard.index');
 Route::get('/admin/dashboard/show/lahiyayaaowkaowkoa={id}', [AdminDashboardController::class,'show'])->name('admin.dashboard.show');
-Route::post('/admin/dashboard/show/updateId={id}',[AdminDashboardController::class,'update'])->name('admin.dashboard.update');
+Route::put('/admin/dashboard/{id}/update', [AdminDashboardController::class, 'update'])->name('admin.dashboard.update');
 
 Route::get('/admin/history', [AdminRiwayatController::class,'index'])->name('admin.riwayat.index');
 Route::get('/admin/history/{id}', [AdminRiwayatController::class,'show'])->name('admin.riwayat.show');

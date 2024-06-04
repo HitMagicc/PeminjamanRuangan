@@ -9,17 +9,29 @@
         Belum ada history
     @else
         
-    @foreach ($history as $item)
-    <div class="card-request">
-        <div class="riwayat-bagian-tempat">
-            <div class="nama no-ruang">{{$item->id}}</div>
-            <div class="nama gedung">{{$item->ruangan->gedung->nama_gedung}}</div>
-            <div class="nama fakultas">{{$item->ruangan->nama_ruangan}}</div>
-        </div>
-        <div class="bagian-adm">
-            <div class="nama tanggal">{{$item->tanggal}}</div>
-            <div class="acceptance" style="background-color: #E2E632"></div>
-        </div>
+    @foreach ($history as $p)
+    <div class="card-request-parent">
+        <a href="{{ route('admin.riwayat.show', $p->id) }}">
+            <div class="card-request">
+                <div class="bagian-tempat">
+                    <div class="nama no-ruang">No: {{ $p->id }}</div>
+                    <div class="nama gedung">Gedung: {{ $p->ruangan->gedung->nama_gedung }}</div>
+                    <div class="nama fakultas">Nama Ruangan: {{ $p->ruangan->nama_ruangan }}</div>
+                </div>
+                <div class="bagian-adm">
+                    <div class="nama tanggal">{{ $p->tanggal }}</div>
+                    <div class="acceptance" style="background-color:
+                        @if($p->approval === 1)
+                            #6AC026
+                        @elseif($p->approval === 0)
+                            #E2E632
+                        @else
+                            #E92323
+                        @endif">
+                    </div>
+                </div>
+            </div>
+        </a>
     </div>
     @endforeach
     @endif

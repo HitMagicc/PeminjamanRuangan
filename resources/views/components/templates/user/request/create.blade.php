@@ -3,7 +3,7 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Request Ruangan</h5>
-    <button class="button-kanan-atas kembali">Kembali</button>
+    <button class="button-kanan-atas kembali" onclick="window.history.back()">Kembali</button>
 </div>
 <div class="req-ruangan">
     <div class="teks-ruangan-form">

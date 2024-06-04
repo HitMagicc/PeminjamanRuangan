@@ -3,7 +3,9 @@
 @section('mainContent')
 <div class="teks-req">
     <h5>Permintaan</h5>
-    <button class="button-kanan-atas">Histori</button>
+    <a href="{{route('admin.riwayat.index')}}">
+        <button class="button-kanan-atas">Histori</button>
+    </a>
 </div>
 <div class="card-request-parent">
     @if ($permintaan->isEmpty())

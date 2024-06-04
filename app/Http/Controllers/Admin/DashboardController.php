@@ -25,10 +25,16 @@ class DashboardController extends Controller
 
     public function update(Request $request, $id) {
         $permintaan = Permintaan::findOrFail($id);
+    
+        $approval = $request->input('approval');
+        $alasan = $request->has('alasan_terima') ? $request->alasan_terima : $request->alasan_tolak;
+    
         $permintaan->update([
-            'approval' => $request->approval
+            'approval' => $approval,
+            'alasan' => $alasan
         ]);
-        return to_route('admin.dashboard.show')->with([
+    
+        return redirect()->route('admin.riwayat.show',$id)->with([
             'success' => 'Status updated successfully',
             'permintaan' => $permintaan
         ]);
