@@ -71,7 +71,11 @@ button[type="submit"]:hover {
 
 .vl {
     border-left: 2px solid #ccc;
-    height: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+}
+.vl-register {
+    border-left: 2px solid #ccc;
+    height: 550px; /* Adjust as needed */
 }
 
 /* Style the carousel container */
