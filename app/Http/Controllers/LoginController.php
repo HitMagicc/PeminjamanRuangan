@@ -49,4 +49,7 @@ class LoginController extends Controller
 
         return redirect(route('index.login'));
     }
+    public function register(){
+        return view('register');
+    }
 }
