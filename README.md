@@ -12,10 +12,10 @@ Arya Muhammad Rafi Raharjo | 140810230072 |Back-end
 Sistem ini dirancang untuk memfasilitasi proses peminjaman gedung yang lebih efisien dan terstruktur bagi mahasiswa,mengatasi berbagai kendala yang selama ini dihadapi dalam pengelolaan peminjaman gedung secara manual. 
 
 ### ERD dan Tabel
-- ERD 
+- ERD <br>
 ![](erd.jpg)
 
-- Table 
+- Table <br>
 ![](table.jpg)
 
 ### Fitur Akun
@@ -33,12 +33,12 @@ Sistem ini dirancang untuk memfasilitasi proses peminjaman gedung yang lebih efi
 - Lakukan command `composer update` untuk sinkronisasi
 - Lakukan command `cp .env.example .env` agar bisa menggunakan env lokal
 - pada `.env` masukkan seperti dibawah
->  DB_CONNECTION=mysql
->  DB_HOST=127.0.0.1
->  DB_PORT=3306
->  DB_DATABASE=peminjamanruanganfmipa
->  DB_USERNAME=root
->  DB_PASSWORD= 
+>  DB_CONNECTION=mysql <br>
+>  DB_HOST=127.0.0.1 <br>
+>  DB_PORT=3306 <br>
+>  DB_DATABASE=peminjamanruanganfmipa <br>
+>  DB_USERNAME=root <br>
+>  DB_PASSWORD=  <br>
 >  sesuaikan dengan database masing masing
 
 - Lakukan command `php artisan migrate:fresh --seed` agar table dari database bisa terbuat dan terisi
