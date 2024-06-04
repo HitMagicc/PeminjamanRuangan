@@ -499,6 +499,21 @@ button[type="submit"]:hover {
     border-radius: 20px;
 }
 
+button.download-button{
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+button.download-button:hover{
+    border: none;
+    color: white;
+    border-radius: 12px;
+    font-size: 20px;
+    background-color: #355A92;
+}
+
+
 .tulisan-detail{
     margin-top: 20px;
     display: flex;

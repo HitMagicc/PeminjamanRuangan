@@ -142,7 +142,6 @@
 .req-ruangan{
     margin-top: 20px;
     background-color: #d9d9d9;
-    border-radius: 40px 40px 0 0;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -304,6 +303,7 @@
 .tambah:hover{
     background-color: #6AC026;
 }
+
 .gedung-form-button{
     display: flex;
     flex-direction: column;
@@ -390,29 +390,6 @@
     background-color: #E92323;
 }
 
-/* .tbody-tr-gedung{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 1px solid #000;
-    
-}
-.tbody-td-gedung{
-    flex: 1;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    margin-top: 20px; margin-bottom: 20px;
-     */
-}
-/* @media (max-width: 1122px) {
-    .tbody-td-gedung {
-        margin-top: 5px; margin-bottom: 5px; /* Full width on very small screens */
-    }
-    .edit-button{
-        margin-bottom: 10px;
-    }
-} */
 
 .kotak-atas{
     margin-top: 20px;

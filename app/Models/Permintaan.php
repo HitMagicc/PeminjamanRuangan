@@ -17,6 +17,7 @@ class Permintaan extends Model
         'id_berkas',
         'approval',
         'peruntukan',
+        'alasan',
         'tanggal',
     ];
     public function ruangan()

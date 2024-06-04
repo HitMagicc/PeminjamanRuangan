@@ -18,6 +18,7 @@ return new class extends Migration
             $table->foreignId('id_berkas')->constrained('berkas')->onDelete('cascade')->onUpdate('cascade');
             $table->integer('approval');
             $table->string('peruntukan');
+            $table->string('alasan')->nullable();
             $table->date('tanggal');
             $table->timestamps();
         });

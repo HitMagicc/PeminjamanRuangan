@@ -80,40 +80,46 @@
     </div>
 </div>
 <div id="terima-modal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-        <h5>Alasan Menerima</h5>
-        <span class="close">&times;</span>
-    </div>
-    
-    <div class="modal-alasan-field">
-        <!--input type="text" id="peruntukan" name="peruntukan"-->
-        <textarea id="peruntukan" name="peruntukan" ></textarea>
-    </div>
-    <div class="modal-button-parent">
-        <button class="modal-button" style="background-color:#6AC026">Terima</button>
-        <button class="modal-button" style="background-color:#fff">Kembali</button>
-    </div>
+    <form action="{{ route('admin.dashboard.update', $p->id) }}" method="post">
+      @csrf
+      @method('PUT')
+      <input type="hidden" name="approval" value="1"> <!-- Set approval to 1 for approval -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Alasan Menerima</h5>
+          <span class="close">&times;</span>
+        </div>
+        <div class="modal-alasan-field">
+          <textarea name="alasan_terima"></textarea>
+        </div>
+        <div class="modal-button-parent">
+          <button class="modal-button" type="submit" style="background-color:#6AC026">Terima</button>
+          <button class="modal-button close" style="background-color:#fff">Kembali</button>
+        </div>
+      </div>
+    </form>
   </div>
-</div>
-<div id="tolak-modal" class="modal">
-  <!-- Modal content -->
-  <div class="modal-content">
-    <div class="modal-header">
-        <h5>Alasan Menolak</h5>
-        <span class="close a">&times;</span>
-    </div>
-    
-    <div class="modal-alasan-field">
-        <textarea id="peruntukan" name="peruntukan" ></textarea>
-    </div>
-    <div class="modal-button-parent">
-        <button class="modal-button" style="background-color:#E92323">Tolak</button>
-        <button class="modal-button" style="background-color:#fff">Kembali</button>
-    </div>
+  
+  <div id="tolak-modal" class="modal">
+    <form action="{{ route('admin.dashboard.update', $p->id) }}" method="post">
+      @csrf
+      @method('PUT')
+      <input type="hidden" name="approval" value="2"> <!-- Set approval to 2 for rejection -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Alasan Menolak</h5>
+          <span class="close a">&times;</span>
+        </div>
+        <div class="modal-alasan-field">
+          <textarea name="alasan_tolak"></textarea>
+        </div>
+        <div class="modal-button-parent">
+          <button class="modal-button" type="submit" style="background-color:#E92323">Tolak</button>
+          <button class="modal-button close" style="background-color:#fff">Kembali</button>
+        </div>
+      </div>
+    </form>
   </div>
-</div>
 
 <script>
     var terimaModal = document.getElementById("terima-modal");

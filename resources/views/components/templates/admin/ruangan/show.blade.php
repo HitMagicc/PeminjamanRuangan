@@ -7,7 +7,7 @@
 </div>
 <div class="req-ruangan">
     <div class="teks-ruangan-form" >
-        Detail Ruangan xxxxxxxxxxx
+        Detail Ruangan {{$ruangan->nama_ruangan}}
     </div>
     <div class="req-gedung-form-parent">
         <div class="ruangan-form-isi">
